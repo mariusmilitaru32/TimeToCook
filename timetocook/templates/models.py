@@ -58,3 +58,15 @@ class UserFavorite(db.Model):
 
     def __repr__(self):
         return f"<UserFavorite user_id={self.user_id}, recipe_id={self.recipe_id}>"
+
+
+class RecipeCategory(db.Model):
+    __tablename__ = "recipe_categories"
+    id = db.Column(db.Integer, primary_key=True)
+    category_name = db.Column(db.String(40), nullable=False)
+    recipe = db.relationship("Recipe", backref="category", cascade="all,delete-orphan")
+
+    def __repr__(self):
+        return (
+            f"<RecipeCategory id={self.recipe_id}, category_name={self.category_name}>"
+        )
