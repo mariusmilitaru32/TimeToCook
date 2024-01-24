@@ -2,4 +2,4 @@ _pychache_/
 .venv/
 env.py
 postgres_db.py
-timetocook/_pychache_/
+**/__pycache__/
