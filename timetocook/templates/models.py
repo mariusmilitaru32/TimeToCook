@@ -1,6 +1,7 @@
 from timetocook import db
 
 
+# User model database
 class User(db.Model):
     __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
@@ -16,3 +17,29 @@ class User(db.Model):
 
     def __repr__(self):
         return f"<User username={self.username}>"
+
+
+class Recipe(db.Model):
+    __tablename__ = "recipes"
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), nullable=False)
+    ingredients = db.Column(db.Text, nullable=False)
+    time = db.Column(db.Integer, nullable=False)
+    rating = db.Column(db.Integer, nullable=False)
+    instructions = db.Column(db.Text, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    category_id = db.Column(
+        db.Integer, db.ForeignKey("recipe_categories.id", ondelete="CASCADE")
+    )
+    img_url = db.Column(db.Text, nullable=True)
+    difficulty = db.Column(db.String(25), nullable=True)
+
+    def __repr__(self):
+        return (
+            f"<Recipe name={self.name}, "
+            f"User username={self.user.username}, "
+            f"Ingredients={self.ingredients}, "
+            f"Time={self.time}, "
+            f"Rating={self.rating}, "
+            f"Instructions={self.instructions}>"
+        )
