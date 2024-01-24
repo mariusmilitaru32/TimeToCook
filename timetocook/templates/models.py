@@ -43,3 +43,18 @@ class Recipe(db.Model):
             f"Rating={self.rating}, "
             f"Instructions={self.instructions}>"
         )
+
+
+class UserFavorite(db.Model):
+    __tablename__ = "user_favorite"
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
+    recipe_id = db.Column(
+        db.Integer, db.ForeignKey("recipes.id", ondelete="CASCADE"), nullable=False
+    )
+    recipe = db.relationship(
+        "Recipe", backref=db.backref("favorited_by", lazy="dynamic")
+    )
+
+    def __repr__(self):
+        return f"<UserFavorite user_id={self.user_id}, recipe_id={self.recipe_id}>"
