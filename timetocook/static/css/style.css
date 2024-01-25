@@ -22,3 +22,12 @@ main {
 .index-panel {
     background-color: #f7b32b;
 }
+
+/* Card image style */
+.card-image img {
+    height: 250px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
