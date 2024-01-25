@@ -214,3 +214,30 @@ def view_recipe(recipe_id):
     user_id = session.get("user_id")
     recipes = Recipe.query.get_or_404(recipe_id)
     return render_template("view_recipe.html", recipe=recipes, user_id=user_id)
+
+
+@app.route("/add_recipe", methods=["POST", "GET"])
+def add_recipe():
+    """
+    Function for adding recipe
+    """
+    recipe_categories = list(RecipeCategory.query.all())
+    if not session.get("user_id"):
+        flash("You must be logged in to add a recipe", "error")
+        return redirect(url_for("login"))
+    if request.method == "POST":
+        recipe = Recipe(
+            name=request.form.get("recipe_name"),
+            ingredients=request.form.get("recipe_ingredients"),
+            time=request.form.get("recipe_time"),
+            rating=request.form.get("recipe_rating"),
+            instructions=request.form.get("recipe_instructions"),
+            img_url=request.form.get("recipe_imgurl"),
+            category_id=request.form.get("recipe_categories"),
+            difficulty=request.form.get("recipe_difficulty"),
+            user_id=session.get("user_id"),
+        )
+        db.session.add(recipe)
+        db.session.commit()
+        return redirect(url_for("index"))
+    return render_template("add_recipe.html", recipe_categories=recipe_categories)
