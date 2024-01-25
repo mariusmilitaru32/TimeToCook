@@ -341,3 +341,25 @@ def add_categories():
         else:
             flash("Category name is required.")
     return render_template("add_categories.html")
+
+
+@app.route("/delete_category/<int:category_id>")
+def delete_category(category_id):
+    """
+    Function to delete a category, only admin can delete
+    """
+    if not session.get("user_id"):
+        flash("You must be logged in to delete a category.", "error")
+        return redirect(url_for("categories"))
+
+    user = User.query.get(session.get("user_id"))
+
+    if not user.admin:  # check if the user is an admin
+        flash("You must be an admin to delete categories.", "error")
+        return redirect(url_for("categories"))
+
+    category_to_delete = RecipeCategory.query.get_or_404(category_id)
+    db.session.delete(category_to_delete)
+    db.session.commit()
+    flash("Category deleted successfully.", "success")
+    return redirect(url_for("categories"))
