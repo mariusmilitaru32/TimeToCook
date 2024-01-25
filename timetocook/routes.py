@@ -115,3 +115,17 @@ def allrecipes():
     """
     recipes = list(Recipe.query.order_by(Recipe.id.desc()).all())
     return render_template("allrecipes.html", recipes=recipes)
+
+
+@app.route("/myrecipes")
+def myrecipes():
+    """
+    Function to render owners recipes in myrecipes.html
+    """
+    if not session.get("user_id"):
+        flash("You must be logged in to view your recipes.", "error")
+        return redirect(url_for("login"))
+
+    user_id = session.get("user_id")
+    my_recipes = Recipe.query.filter_by(user_id=user_id).all()
+    return render_template("myrecipes.html", recipes=my_recipes)
