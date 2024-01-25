@@ -75,3 +75,12 @@ def register():
             flash(f"Account created for {username}", "success")
             return redirect(url_for("login"))
     return render_template("register.html")
+
+
+@app.route("/users", methods=["GET"])
+def users():
+    """
+    Function to render all the users in users.html
+    """
+    nonadmin_users = list(User.query.filter_by(admin=False).all())
+    return render_template("users.html", users=nonadmin_users)
