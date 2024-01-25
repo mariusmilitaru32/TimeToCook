@@ -370,9 +370,37 @@ def search():
     """
     Function to search for recipes in allrecipes.html
     """
-    query = request.args.get("query") 
+    query = request.args.get("query")
     if not query:
         return redirect(url_for("allrecipes"))
     # Query the database for recipe names
     recipes = Recipe.query.filter(Recipe.name.ilike(f"%{query}%")).all()
     return render_template("allrecipes.html", recipes=recipes, query=query)
+
+
+@app.route("/profile", methods=["POST", "GET"])
+def profile():
+    """
+    Function to display profile page.
+    Let the users to change their password
+    """
+    if not session.get("user_id"):
+        flash("You must be logged in to view your profile.", "error")
+        return redirect(url_for("login"))
+
+    user = User.query.get(session.get("user_id"))
+
+    if request.method == "POST":
+        current_password = request.form.get("current_password")
+        new_password = request.form.get("password")
+        if not check_password_hash(user.password, current_password):
+            flash("Incorrect current password.", "error")
+            return redirect(url_for("profile"))
+        user.password = generate_password_hash(new_password)
+        db.session.commit()
+        flash("Your password has been updated.", "success")
+        session.pop("user_id")
+        session.pop("username")
+        return redirect(url_for("login"))
+
+    return render_template("profile.html", user=user)
