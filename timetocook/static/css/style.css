@@ -108,3 +108,15 @@ main {
     margin: 10px 0;
     border-radius: 5px;
 }
+
+.page-footer {
+    background-color: #2d1e2f;
+}
+
+/* Increase font size for social icons within the list */
+ul li a .fa-facebook,
+ul li a .fa-instagram,
+ul li a .fa-youtube {
+    font-size: 24px;
+    padding: 4px;
+}
