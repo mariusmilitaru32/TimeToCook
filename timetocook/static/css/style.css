@@ -82,3 +82,29 @@ main {
     color: #f72c25;
     font-weight: bold;
 }
+
+
+/* Hide the img tag if its src attribute is empty */
+.card-image img[src=""],
+.card-image img:not([src]) {
+    display: none;
+}
+
+/* Flask flash Alerts messages style */
+.alert-success {
+    color: white;
+    background-color: green;
+    border: 1px solid darkgreen;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.alert-error {
+    color: white;
+    background-color: #f72c25;
+    border: 1px solid darkred;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
