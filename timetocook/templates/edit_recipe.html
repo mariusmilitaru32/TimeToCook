@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h4 class="center red-text">Welcome</h4>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2 " method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe.id) }}">
+        <div class="card-panel">
+            <!--recipe name-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix "></i>
+                    <input id="recipe_name" value="{{ recipe.name }}" name="recipe_name" placeholder="Enter recipe name"
+                        minlength="3" maxlength="50" type="text" class="validate" required>
+                    <label for="recipe_name">Recipe Name </label>
+                </div>
+            </div>
+            <!--recipe ingredients-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-bowl-food prefix "></i>
+                    <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5" maxlength="200"
+                        type="text" class="materialize-textarea validate"
+                        placeholder="Enter ingredients separated by commas" required>{{ recipe.ingredients }}</textarea>
+                    <label for="recipe_ingredients">Incredients</label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="fa-solid fa-clock prefix"></i>
+                    <input id="recipe_time" name="recipe_time" value="{{ recipe.time }}" type="number"
+                        placeholder="Enter time in minutes" class="validate" required>
+                    <label for="recipe_time">Duration</label>
+                </div>
+
+                <div class="input-field col s12 m6">
+                    <i class="fa-solid fa-star prefix "></i>
+                    <input id="recipe_rating" value="{{ recipe.rating }}" name="recipe_rating" min="1" max="5"
+                        type="number" placeholder="Enter rating from 1 to 5" class="validate" required>
+                    <label for="recipe_rating">Rating</label>
+                </div>
+            </div>
+            <!--Instructions-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-chalkboard-user prefix"></i>
+                    <textarea id="recipe_instructions" name="recipe_instructions" class="materialize-textarea"
+                        placeholder="Use a new line to seperate steps" required>{{ recipe.instructions }}</textarea>
+                    <label for="recipe_instructions">Instructions</label>
+                </div>
+            </div>
+
+            <!--Difficulty-->
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="fas fa-pencil-alt prefix "></i>
+                    <input id="recipe_difficulty" value="{{ recipe.difficulty }}" name="recipe_difficulty"
+                        placeholder="Enter difficulty" minlength="3" maxlength="50" type="text" class="validate"
+                        required>
+                    <label for="recipe_difficulty">Difficulty</label>
+                </div>
+
+                <!--Category-->
+                <div class="input-field col s12 m6">
+                    <i class="fa-solid fa-list prefix"></i>
+                    <select id="recipe_categories" name="recipe_categories" class="validate">
+
+                        {% for category in recipe_categories %}
+                        <option value="{{ category.id }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="recipe_categories">Select Category</label>
+                </div>
+            </div>
+            <!--Image URL-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-image prefix"></i>
+                    <input id="recipe_imgurl" value="{{ recipe.img_url }}" name="recipe_imgurl" type="text"
+                        class="validate" />
+                    <label for="recipe_imgurl">Image URL</label>
+                </div>
+            </div>
+            <!--Submit button-->
+            <div class="row">
+                <div class="col s12 center">
+                    <button id="submit-recipe" class="btn" type="submit">
+                        Save Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
