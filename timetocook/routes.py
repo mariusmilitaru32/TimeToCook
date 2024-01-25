@@ -84,3 +84,14 @@ def users():
     """
     nonadmin_users = list(User.query.filter_by(admin=False).all())
     return render_template("users.html", users=nonadmin_users)
+
+
+@app.route("/userban/<int:user_id>", methods=["POST", "GET"])
+def userban(user_id):
+    """
+    Function to restrict asscess to users
+    """
+    user = User.query.get(user_id)
+    user.banned = True
+    db.session.commit()
+    return redirect(url_for("users"))
