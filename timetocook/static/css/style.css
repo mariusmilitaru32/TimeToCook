@@ -141,3 +141,8 @@ ul li a .fa-youtube {
 .equal-height-panels .card-panel .btn {
     margin-top: auto;
 }
+
+.index-card-title {
+    font-size: 1.5rem;
+    /* Adjust as needed for small screens */
+}

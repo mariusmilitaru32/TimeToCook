@@ -8,7 +8,7 @@
         <div class="col s12 m6 l4 center-align">
             <div class="card-panel index-panel">
                 <i class="fa-solid fa-layer-group  fa-3x" aria-hidden="true"></i>
-                <h4 class="page-title">Portofolio</h4>
+                <h4 class="page-title index-card-title">Portofolio</h4>
                 <p>Add your own recipes and share them with the community.</p>
                 {% if session.user_id %}
                 <a href="{{ url_for('myrecipes') }}" class="btn waves-effect waves-light ">View My
@@ -19,7 +19,7 @@
         <div class="col s12 m6 l4 center-align">
             <div class="card-panel index-panel">
                 <i class="fa-solid fa-users fa-3x" aria-hidden="true"></i>
-                <h4 class="page-title">Discover</h4>
+                <h4 class="page-title index-card-title">Discover</h4>
                 <p>Search for recipes and add them to your favourites.</p>
                 {% if session.user_id %}
                 <a href="{{ url_for('allrecipes') }}" class="btn waves-effect waves-light ">Browse All
@@ -30,7 +30,7 @@
         <div class="col s12 m12 l4 center-align">
             <div class="card-panel index-panel">
                 <i class="fa-solid fa-star fa-3x " aria-hidden="true"></i>
-                <h4 class="page-title ">Save</h4>
+                <h4 class="page-title index-card-title">Save</h4>
                 <p>Save your favourite recipes for later use.</p>
                 {% if session.user_id %}
                 <a href="{{ url_for('favourites') }}" class="btn waves-effect waves-light ">See
