@@ -312,7 +312,7 @@ def categories():
 @app.route("/add_categories", methods=["POST", "GET"])
 def add_categories():
     """
-    Function to add categories, it check if the user is an admin
+    Function to add categories, only the admin can add/edit/delete
     """
     if not session.get("user_id"):
         flash("You must be logged in and an admin to add categories.", "error")
