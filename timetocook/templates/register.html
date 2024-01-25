@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="center">Sign Up</h2>
+
+<div class="row">
+    <div class="container">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+            <div class="card-panel">
+                <!--username-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="username" name="username" type="text" minlength="3" maxlength="30"
+                            pattern="^[a-zA-Z0-9]{3,30}$" class="validate" required>
+                        <label for="username">Username</label>
+                        <span class="helper-text" data-error="Username should be between 3 and 30, alphanumeric, with no special
+                        characters"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--first name-->
+                    <div class="input-field col s12">
+                        <input id="email" name="email" type="email" class="validate" required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <!--password-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="password">Password</label>
+                        <span class="helper-text" data-error="Check password format">Password should be between 5 and
+                            15, alphanumeric, with
+                            no special
+                            characters</span>
+                    </div>
+                </div>
+                <!--confirm password-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="confirm_password" name="confirm_password" type="password" minlength="5"
+                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                        <label for="confirm_password">Confirm Password</label>
+                    </div>
+                    <span id="error-message">Passwords do not match</span>
+                </div>
+                <!--submit-->
+                <div class="row">
+                    <button type="submit" class="btn waves-effect waves-light col s12">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12">
+        <p class="center-align">
+            Already registered? <a href="{{ url_for('login') }}">Log In here.</a>
+        </p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/confirmpas.js') }}"></script>
+
+
+{% endblock %}
