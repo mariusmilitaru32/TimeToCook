@@ -274,3 +274,27 @@ def edit_recipe(recipe_id):
     return render_template(
         "edit_recipe.html", recipe=recipe, recipe_categories=recipe_categories
     )
+
+
+@app.route("/delete_recipe/<int:recipe_id>")
+def delete_recipe(recipe_id):
+    """
+    Function to delete the recipe
+    """
+    recipe = Recipe.query.get_or_404(recipe_id)
+    if not session.get("user_id"):
+        flash("You must be logged in to delete a recipe", "error")
+        return redirect(url_for("login"))
+
+    user_id = session.get("user_id")
+
+    if recipe.user_id != user_id:  # check if the user is the owner
+        flash("You are not the owner of the recipe.", "error")
+        return redirect(url_for("index"))
+
+    # Remove the recipe from the user's favorites
+    UserFavorite.query.filter_by(recipe_id=recipe_id).delete()
+    db.session.delete(recipe)
+    db.session.commit()
+    flash("Recipe deleted successfully.", "success")
+    return redirect(url_for("index"))
