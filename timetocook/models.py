@@ -53,7 +53,10 @@ class UserFavorite(db.Model):
         db.Integer, db.ForeignKey("recipes.id", ondelete="CASCADE"), nullable=False
     )
     recipe = db.relationship(
-        "Recipe", backref=db.backref("favorited_by", lazy="dynamic")
+        "Recipe",
+        backref=db.backref(
+            "favorited_by", lazy="dynamic", cascade="all, delete-orphan"
+        ),
     )
 
     def __repr__(self):
