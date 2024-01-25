@@ -203,3 +203,14 @@ def remove_favorite(recipe_id):
         flash("Recipe not found in your favorites.", "error")
 
     return redirect(url_for("favourites"))
+
+
+@app.route("/view_recipe/<int:recipe_id>")
+def view_recipe(recipe_id):
+    """
+    Function to render recipe in view_recipe.html
+
+    """
+    user_id = session.get("user_id")
+    recipes = Recipe.query.get_or_404(recipe_id)
+    return render_template("view_recipe.html", recipe=recipes, user_id=user_id)
