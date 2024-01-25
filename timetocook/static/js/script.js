@@ -15,3 +15,26 @@ document.addEventListener("DOMContentLoaded", function() {
  
 
 });
+
+//function to validate image urls
+function validateAndSetImageUrls() {
+    var images = document.querySelectorAll('.card-image img');
+    var defaultImageUrl = '../images/logo.png';
+  
+    images.forEach(function(img) {
+        // Create a new Image object for validation
+        var testImage = new Image();
+        testImage.onload = function() {
+            // If this fires, the URL is valid and the image is loaded
+            img.src = testImage.src;
+        };
+        testImage.onerror = function() {
+            // If this fires, the URL is invalid or the image cannot be loaded
+            img.src = defaultImageUrl;
+        };
+        // Set the src to test loading the image
+        testImage.src = img.src;
+    });
+  }
+  window.onload = validateAndSetImageUrls();
+  
