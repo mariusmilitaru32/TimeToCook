@@ -59,6 +59,9 @@
             <li><a href="{{ url_for('profile') }}">Profile</a></li>
             <li><a href="{{ url_for('myrecipes') }}">My Recipes</a></li>
             <li><a href="{{ url_for('add_recipe') }}">Add Recipes</a></li>
+            <li><a href="{{ url_for('allrecipes') }}">All Recipes</a></li>
+            <li><a href="{{ url_for('categories') }}">Categories</a></li>
+            <li><a href="{{ url_for('favourites') }}">Favourites</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% if session.get("is_admin") %}
             <li><a href="{{ url_for('users') }}">Manage Users</a></li>
@@ -69,8 +72,6 @@
             <li><a href="{{ url_for('categories') }}">Categories</a></li>
             <li><a href="{{ url_for('allrecipes') }}">All Recipes</a></li>
             <li><a href="{{ url_for('favourites') }}">Favourites</a></li>
-
-
             {% endif %}
         </ul>
     </header>
