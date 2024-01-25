@@ -404,3 +404,11 @@ def profile():
         return redirect(url_for("login"))
 
     return render_template("profile.html", user=user)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Function to handle 404 error
+    """
+    return render_template("404.html"), 404
