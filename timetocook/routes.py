@@ -307,3 +307,37 @@ def categories():
     """
     all_categories = RecipeCategory.query.all()
     return render_template("categories.html", categories=all_categories)
+
+
+@app.route("/add_categories", methods=["POST", "GET"])
+def add_categories():
+    """
+    Function to add categories, it check if the user is an admin
+    """
+    if not session.get("user_id"):
+        flash("You must be logged in and an admin to add categories.", "error")
+        return redirect(url_for("categories"))
+
+    user = User.query.get(session.get("user_id"))
+
+    if not user.admin:  # check if the user is an admin
+        flash("You must be an admin to add categories.", "error")
+        return redirect(url_for("categories"))
+
+    if request.method == "POST":
+        category_name = request.form.get("category_name")
+        if category_name:
+            existing_category = RecipeCategory.query.filter_by(
+                category_name=category_name
+            ).first()
+            if existing_category is None:
+                category = RecipeCategory(category_name=category_name)
+                db.session.add(category)
+                db.session.commit()
+                flash("Category added successfully.", "success")
+                return redirect(url_for("categories"))
+            else:
+                flash("Category already exists.", "error")
+        else:
+            flash("Category name is required.")
+    return render_template("add_categories.html")
