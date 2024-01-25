@@ -95,3 +95,14 @@ def userban(user_id):
     user.banned = True
     db.session.commit()
     return redirect(url_for("users"))
+
+
+@app.route("/userunban/<int:user_id>", methods=["POST", "GET"])
+def userunban(user_id):
+    """
+    Function to unrestrict access to users
+    """
+    user = User.query.get(user_id)
+    user.banned = False
+    db.session.commit()
+    return redirect(url_for("users"))
