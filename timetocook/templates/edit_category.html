@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h4 class="center red-text">Edit Category</h4>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_category', category_id=category.id) }}">
+        <div class="card-panel">
+            <!-- category name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="category_name" name="category_name" value="{{ category.category_name }}" minlength="3"
+                        maxlength="25" type="text" class="validate" required />
+                    <label for="category_name">Category Name</label>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn waves-effect waves-light full-width gather-colour">
+                        Save Category
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
