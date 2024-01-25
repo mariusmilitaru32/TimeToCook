@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+<h4 class="center red-text">Welcome</h4>
+
+<div class="row">
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel">
+            <div class="view-recipe-img container center-align card-image"><img src="{{recipe.img_url}}">
+
+            </div>
+            <h2 class="recipe-title">{{recipe.name}}</h2>
+            <p>Added by: {{ recipe.user.username }}</p>
+
+            <p class="card-preview">Category: {{ recipe.category.category_name }}</p>
+
+            <p>Time to cook: {{recipe.time}} minutes</p>
+            <p>Difficulty: {{recipe.difficulty}}</p>
+            <h4 class="title">Ingredients</h4>
+
+            <div>
+                {% set ingredients_list = recipe.ingredients.split(',') %}
+                <ul>
+                    {% for ingredient in ingredients_list %}
+                    <li><i class="fa-solid fa-bread-slice"></i> {{ ingredient.strip() }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <h4>Steps</h4>
+            {% set instructions_list = recipe.instructions.split(',') %}
+            {% for instruction in instructions_list %}
+            <li>{{ instruction.strip() }}</li>
+            {% endfor %}
+            <div class="center-align">
+
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Delete</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4 class="center">Delete Recipe</h4>
+                        <p>Please confirm that you want to delete this recipe. This action cannot be undone.</p>
+                    </div>
+                    <div class="modal-footer center-align">
+                        <a class="modal-close btn green">No</a>
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe.id)}}"
+                            class="modal-close center btn red">Yes</a>
+                    </div>
+                </div>
+
+
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn green">Edit</a>
+
+
+            </div>
+            {% if recipe.favorited_by.filter_by(user_id=user_id).first() %}
+            <!-- Unfavorite button -->
+            <form action="{{ url_for('remove_favorite', recipe_id=recipe.id) }}" method="POST">
+                <button type="submit" class="btn">Unfavorite</button>
+            </form>
+            {% else %}
+            <!-- Favorite button -->
+            <form action="{{ url_for('add_favorite', recipe_id=recipe.id) }}" method="POST">
+                <button type="submit" class="btn">Add to Favorites</button>
+            </form>
+            {% endif %}
+        </div>
+        <div class="center-align">
+            <button class="btn " onclick="history.back()"><i class="fa-solid fa-angle-left icon-padding-right"></i>
+                GoBack</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
