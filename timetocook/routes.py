@@ -241,3 +241,36 @@ def add_recipe():
         db.session.commit()
         return redirect(url_for("index"))
     return render_template("add_recipe.html", recipe_categories=recipe_categories)
+
+
+@app.route("/edit_recipe/<int:recipe_id>", methods=["POST", "GET"])
+def edit_recipe(recipe_id):
+    """
+    Function to edit the recipe
+    """
+    recipe_categories = list(RecipeCategory.query.all())
+    recipe = Recipe.query.get_or_404(recipe_id)
+    if not session.get("user_id"):
+        flash("You must be logged in to edit a recipe", "error")
+        return redirect(url_for("login"))
+
+    user_id = session.get("user_id")
+    if recipe.user_id != user_id:  # check if the user is the owner
+        flash("You must be the owner to edit the recipe.", "error")
+        return redirect(url_for("index"))
+
+    if request.method == "POST":
+        recipe.name = request.form.get("recipe_name")
+        recipe.ingredients = request.form.get("recipe_ingredients")
+        recipe.time = request.form.get("recipe_time")
+        recipe.rating = request.form.get("recipe_rating")
+        recipe.instructions = request.form.get("recipe_instructions")
+        recipe.img_url = request.form.get("recipe_imgurl")
+        recipe.category_id = request.form.get("recipe_categories")
+        recipe.difficulty = request.form.get("recipe_difficulty")
+        db.session.commit()
+        flash("Recipe updated successfully.", "success")
+        return redirect(url_for("index"))
+    return render_template(
+        "edit_recipe.html", recipe=recipe, recipe_categories=recipe_categories
+    )
