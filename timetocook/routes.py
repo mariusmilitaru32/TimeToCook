@@ -177,3 +177,29 @@ def add_favorite(recipe_id):
         flash("You have already favorited this recipe.", "error")
 
     return redirect(url_for("favourites"))
+
+
+@app.route("/remove_favorite/<int:recipe_id>", methods=["POST"])
+def remove_favorite(recipe_id):
+    """
+    Function to remove recipe from favourites
+    """
+    if not session.get("user_id"):
+        flash("You must be logged in to remove favorites.", "error")
+        return redirect(url_for("login"))
+
+    user_id = session.get("user_id")
+
+    # Find the favorite to be removed
+    favorite_to_remove = UserFavorite.query.filter_by(
+        user_id=user_id, recipe_id=recipe_id
+    ).first()
+
+    if favorite_to_remove:
+        db.session.delete(favorite_to_remove)
+        db.session.commit()
+        flash("Recipe removed from favorites successfully!", "success")
+    else:
+        flash("Recipe not found in your favorites.", "error")
+
+    return redirect(url_for("favourites"))
