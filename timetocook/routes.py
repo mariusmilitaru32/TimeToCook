@@ -14,6 +14,10 @@ def index():
 # login function
 @app.route("/login", methods=["POST", "GET"])
 def login():
+    """
+    Route for handling user login, checks the database for a matching user,
+     if user is banned and verifies the password.
+    """
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
@@ -31,3 +35,16 @@ def login():
         else:
             flash("Invalid username or password", "error")
     return render_template("login.html")
+
+
+@app.route("/logout")
+def logout():
+    """
+    Logout the user by popping the user_id and username from the session.
+    Show a flash message to indicate successful logout.
+    Redirect the user to the index page.
+    """
+    session.pop("user_id", None)
+    session.pop("username", None)
+    flash("You have been logged out", "success")
+    return redirect(url_for("index"))
