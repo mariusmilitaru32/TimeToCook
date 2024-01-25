@@ -150,3 +150,30 @@ def favourites():
     )
 
     return render_template("favourites.html", favourites=favourites)
+
+
+@app.route("/add_favorite/<int:recipe_id>", methods=["POST"])
+def add_favorite(recipe_id):
+    """
+    Function to add recipe to favourites
+    """
+    if not session.get("user_id"):
+        flash("You must be logged in to add favorites.", "error")
+        return redirect(url_for("login"))
+
+    user_id = session.get("user_id")
+
+    # Check if the recipe is already favourited to avoid errors
+    existing_favorite = UserFavorite.query.filter_by(
+        user_id=user_id, recipe_id=recipe_id
+    ).first()
+
+    if existing_favorite is None:
+        new_favorite = UserFavorite(user_id=user_id, recipe_id=recipe_id)
+        db.session.add(new_favorite)
+        db.session.commit()
+        flash("Recipe added to favorites successfully!", "success")
+    else:
+        flash("You have already favorited this recipe.", "error")
+
+    return redirect(url_for("favourites"))
