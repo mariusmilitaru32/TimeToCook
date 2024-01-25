@@ -120,3 +120,24 @@ ul li a .fa-youtube {
     font-size: 24px;
     padding: 4px;
 }
+
+/* Fix index top panels height */
+.equal-height-panels {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equal-height-panels>.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.equal-height-panels .card-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.equal-height-panels .card-panel .btn {
+    margin-top: auto;
+}
