@@ -67,3 +67,18 @@ main {
     overflow: hidden;
 
 }
+
+/* Dropdown menu style */
+.dropdown-trigger.btn.menu-btn {
+    background-color: #f72c25;
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #2d1e2f;
+}
+
+.card .card-image .card-title {
+    color: #f72c25;
+    font-weight: bold;
+}
