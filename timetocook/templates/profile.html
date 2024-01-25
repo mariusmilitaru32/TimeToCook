@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h4 class="center">Change Password</h4>
+
+<div class="row">
+    <div class="container">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('profile') }}">
+            <div class="card-panel">
+                <!--password-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="current_password" name="current_password" type="password" minlength="5"
+                            maxlength="15" class="validate" placeholder="Type Current Password" required>
+                        <label for="password">Current Password</label>
+
+                    </div>
+                </div>
+                <!--confirm password-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                            pattern="^[a-zA-Z0-9]{5,15}$" class="validate" placeholder="Type New Password" required>
+                        <label for="password">New Password</label>
+                        <span class="helper-text" data-error="Check password format">Password should be between 5 and
+                            15, alphanumeric, with
+                            no special
+                            characters</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="confirm_password" name="confirm_password" type="password" minlength="5"
+                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate"
+                            placeholder="Confirm New Password" required>
+                        <label for="confirm_password">Confirm New Password</label>
+                    </div>
+                    <span id="error-message">Passwords do not match</span>
+                </div>
+                <!--submit-->
+                <div class="row">
+                    <button type="submit" class="btn waves-effect waves-light col s12">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/confirmpas.js') }}"></script>
+
+
+{% endblock %}
