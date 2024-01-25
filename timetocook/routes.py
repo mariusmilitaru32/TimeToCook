@@ -48,3 +48,30 @@ def logout():
     session.pop("username", None)
     flash("You have been logged out", "success")
     return redirect(url_for("index"))
+
+
+@app.route("/register", methods=["POST", "GET"])
+def register():
+    """
+    Register new user with username, password, and email.
+    If username already exists, display error message.
+    Otherwise, create new user and redirect to login page.
+    """
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        email = request.form.get("email")
+        user = User.query.filter_by(username=username).first()
+        if user:
+            flash("Username already exists.", "error")
+        else:
+            new_user = User(
+                username=username,
+                password=generate_password_hash(password),
+                email=email,
+            )
+            db.session.add(new_user)
+            db.session.commit()
+            flash(f"Account created for {username}", "success")
+            return redirect(url_for("login"))
+    return render_template("register.html")
