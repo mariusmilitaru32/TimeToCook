@@ -53,3 +53,17 @@ main {
     font-weight: bold;
     text-align: center;
 }
+
+/* Password Error message style */
+#error-message {
+    display: none;
+    color: red;
+}
+
+/* Card content style */
+.card-content {
+    height: 170px;
+    width: 100%;
+    overflow: hidden;
+
+}
