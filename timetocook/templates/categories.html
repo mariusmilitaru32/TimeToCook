@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="center red-text"><a href="{{ url_for('add_categories') }}">Add Category</h4></a>
-
+<div class="container">
+    <h4 class="center-align">Categories</h4>
+    <div class="center-align">
+        <a href="{{ url_for('add_categories') }}" class="btn">Add Category</a>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         {% for category in categories %}
