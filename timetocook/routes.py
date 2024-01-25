@@ -363,3 +363,16 @@ def delete_category(category_id):
     db.session.commit()
     flash("Category deleted successfully.", "success")
     return redirect(url_for("categories"))
+
+
+@app.route("/search", methods=["GET"])
+def search():
+    """
+    Function to search for recipes in allrecipes.html
+    """
+    query = request.args.get("query") 
+    if not query:
+        return redirect(url_for("allrecipes"))
+    # Query the database for recipe names
+    recipes = Recipe.query.filter(Recipe.name.ilike(f"%{query}%")).all()
+    return render_template("allrecipes.html", recipes=recipes, query=query)
