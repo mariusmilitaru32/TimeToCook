@@ -129,3 +129,24 @@ def myrecipes():
     user_id = session.get("user_id")
     my_recipes = Recipe.query.filter_by(user_id=user_id).all()
     return render_template("myrecipes.html", recipes=my_recipes)
+
+
+@app.route("/favourites")
+def favourites():
+    """
+    Function to render favourites in favourites.html
+    """
+    if not session.get("user_id"):
+        flash("You must be logged in to view your favorites.", "error")
+        return redirect(url_for("login"))
+
+    user_id = session.get("user_id")
+
+    # Fetch the associated Recipe objects for the user's favorites.
+    favourites = (
+        Recipe.query.join(UserFavorite, UserFavorite.recipe_id == Recipe.id)
+        .filter(UserFavorite.user_id == user_id)
+        .all()
+    )
+
+    return render_template("favourites.html", favourites=favourites)
