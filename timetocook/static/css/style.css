@@ -31,3 +31,12 @@ main {
     background-size: cover;
     background-position: center;
 }
+
+/* View Recipe  image style*/
+.view-recipe-img {
+    position: relative;
+    width: 100%;
+    padding-bottom: 70%;
+    overflow: hidden;
+    display: flex;
+}
