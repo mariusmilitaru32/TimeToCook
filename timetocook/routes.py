@@ -298,3 +298,12 @@ def delete_recipe(recipe_id):
     db.session.commit()
     flash("Recipe deleted successfully.", "success")
     return redirect(url_for("index"))
+
+
+@app.route("/categories")
+def categories():
+    """
+    Function to display all categories
+    """
+    all_categories = RecipeCategory.query.all()
+    return render_template("categories.html", categories=all_categories)
