@@ -292,8 +292,6 @@ def delete_recipe(recipe_id):
         flash("You are not the owner of the recipe.", "error")
         return redirect(url_for("index"))
 
-    # Remove the recipe from the user's favorites
-    UserFavorite.query.filter_by(recipe_id=recipe_id).delete()
     db.session.delete(recipe)
     db.session.commit()
     flash("Recipe deleted successfully.", "success")
