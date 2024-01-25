@@ -106,3 +106,12 @@ def userunban(user_id):
     user.banned = False
     db.session.commit()
     return redirect(url_for("users"))
+
+
+@app.route("/allrecipes")
+def allrecipes():
+    """
+    Function to render all the recipes in allrecipes.html
+    """
+    recipes = list(Recipe.query.order_by(Recipe.id.desc()).all())
+    return render_template("allrecipes.html", recipes=recipes)
