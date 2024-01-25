@@ -343,6 +343,41 @@ def add_categories():
     return render_template("add_categories.html")
 
 
+@app.route("/edit_category/<int:category_id>", methods=["POST", "GET"])
+def edit_category(category_id):
+    """
+    Function to edit categories
+    """
+    if not session.get("user_id"):
+        flash("You must be logged in to edit categories.", "error")
+        return redirect(url_for("categories"))
+
+    user = User.query.get(session.get("user_id"))
+
+    if not user.admin:
+        flash("You must be an admin to edit categories.", "error")
+        return redirect(url_for("categories"))
+
+    category_to_edit = RecipeCategory.query.get_or_404(category_id)
+    if request.method == "POST":
+        new_category_name = request.form.get("category_name")
+        if new_category_name:
+            # Check if another category with the same name exists, excluding the current one
+            existing_category = RecipeCategory.query.filter_by(
+                category_name=new_category_name
+            ).first()
+            if existing_category and existing_category.id != category_id:
+                flash("Category with this name already exists.", "error")
+            else:
+                category_to_edit.category_name = new_category_name
+                db.session.commit()
+                flash("Category updated successfully.", "success")
+                return redirect(url_for("categories"))
+        else:
+            flash("Category name is required.", "error")
+    return render_template("edit_category.html", category=category_to_edit)
+
+
 @app.route("/delete_category/<int:category_id>")
 def delete_category(category_id):
     """

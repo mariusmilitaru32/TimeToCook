@@ -127,6 +127,7 @@ ul li a .fa-youtube {
     flex-wrap: wrap;
 }
 
+/* Fix index top panels height  and title */
 .equal-height-panels>.col {
     display: flex;
     flex-direction: column;
@@ -144,5 +145,5 @@ ul li a .fa-youtube {
 
 .index-card-title {
     font-size: 1.5rem;
-    /* Adjust as needed for small screens */
+
 }
