@@ -34,4 +34,12 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 ## Features
 
  - ### NavBar
-   
+   - #### 
+     The navigation bar allows users to quickly find recipes, save them to favorites, and access login and signup options. The account navigation button features a dropdown menu that displays certain pages only when the user is logged in.
+    ![Mockup](documentation/features/navbar.png)
+   - #### 
+     When the user is not logged in
+     ![Mockup](documentation/features/navbar-notloggedin.png)
+   - ####
+     Once the user is logged in, their username will be displayed in the dropdown menu. Pages such as ‘Profile’, ‘Add Recipes’, ‘My Recipes’, and ‘Log Out’ will be visible.
+     ![Mockup](documentation/features/navbar-loggedin.png)
