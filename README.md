@@ -10,6 +10,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 ## Index – Table of Contents
 - [Index – Table of Contents](#index--table-of-contents)
 - [User Experience (UX)](#user-experience-ux)
+- [Features](#features)
 
 ## User Experience (UX)
 
@@ -18,8 +19,9 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     1. As a first time visitor, I want to see the most rated recipes.
     2. As a first time visitor, I want to be able to register on website.
     3. As a first time visitor, I want to be able to view recipe categories.
+    4. As a first time visitor, I want to easily see website's features.
   - #### B. Returning Visitor 
-    1. As a returning visitor, I want to be able to log in on website.
+    1. As a returning visitor, I want to be able to log in to the website.
     2. As a returning visitor, I want to be able to add a recipe.
     3. As a returning visitor, I want to be able to edit my recipes.
     4. As a returning visitor, I want to be able to search through all the recipes.
@@ -28,3 +30,8 @@ TimeToCook is a place where you can find and add recipes. You can also save your
   - #### C. Administrator
     1. As a administrator, I want to be able to manage categories.
     2. As a administrator, I want to be able to restric access to users.
+   
+## Features
+
+ - ### NavBar
+   
