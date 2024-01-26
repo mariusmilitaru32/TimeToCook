@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 /* Main style */
 html {
     height: 100%;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -127,7 +130,7 @@ ul li a .fa-youtube {
     flex-wrap: wrap;
 }
 
-/* Fix index top panels height  and title */
+/* Style for index top panels height  and title */
 .equal-height-panels>.col {
     display: flex;
     flex-direction: column;
