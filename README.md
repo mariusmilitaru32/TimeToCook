@@ -43,3 +43,6 @@ TimeToCook is a place where you can find and add recipes. You can also save your
    - ####
      Once the user is logged in, their username will be displayed in the dropdown menu. Pages such as ‘Profile’, ‘Add Recipes’, ‘My Recipes’, and ‘Log Out’ will be visible.
      ![Mockup](documentation/features/navbar-loggedin.png)
+- ### Index Page
+  - #### 
+    The index page consists of three card panels, each simply explaining the main features of the website.

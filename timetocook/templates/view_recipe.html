@@ -27,7 +27,7 @@
             </div>
 
             <h4>Steps</h4>
-            {% set instructions_list = recipe.instructions.split(',') %}
+            {% set instructions_list = recipe.instructions.split('/') %}
             {% for instruction in instructions_list %}
             <li>{{ instruction.strip() }}</li>
             {% endfor %}
