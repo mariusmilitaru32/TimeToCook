@@ -64,5 +64,10 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     The website is intuitively organized into categories to ensure you can find the perfect recipe with ease. The categories can be only added, deleted or edited by admins.
     ![Mockup](documentation/features/categorieslogin.png)
     ![Mockup](documentation/features/categories.png)
-
-
+- ### All recipes
+  - #### 
+    The 'All Recipes' page provides users with a comprehensive view of all the recipes published on the website. The search function is a tool provided to make the recipes on the website easily discoverable.
+    ![Mockup](documentation/features/allrecipes.png)
+- ### Register
+  - ####  
+  
