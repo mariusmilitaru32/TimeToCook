@@ -24,7 +24,7 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
             if user.banned:
-                flash("Your account has been dissabled. Please contact us", "error")
+                flash("Your account has been dissabled.", "error")
                 return redirect(url_for("login"))
             else:
                 session["user_id"] = user.id
