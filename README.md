@@ -54,3 +54,15 @@ TimeToCook is a place where you can find and add recipes. You can also save your
   - #### 
     This footer text gives a brief overview of what TimeToCook website offers, links to the social platform and invites users to engage with the content.
     ![Mockup](documentation/features/footer.png)
+- ### Favourites page
+  - #### 
+    Users can save recipes by adding them to their favourites. They need to be logged in to be able to add recipes to their favourites.
+    ![Mockup](documentation/features/favourites.png)
+    ![Mockup](documentation/features/favouritelogin.png)
+- ### Categories
+  - #### 
+    The website is intuitively organized into categories to ensure you can find the perfect recipe with ease. The categories can be only added, deleted or edited by admins.
+    ![Mockup](documentation/features/categorieslogin.png)
+    ![Mockup](documentation/features/categories.png)
+
+
