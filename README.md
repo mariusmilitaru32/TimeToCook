@@ -46,3 +46,4 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 - ### Index Page
   - #### 
     The index page consists of three card panels, each simply explaining the main features of the website.
+    ![Mockup](documentation/features/indexcardpanels.png)
