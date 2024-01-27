@@ -52,4 +52,5 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/features/indexmostrated.png)
 - ### Footer
   - #### 
-    This footer text gives a brief overview of what TimeToCook website offers, links to the social platform and invites users to engage with the content
+    This footer text gives a brief overview of what TimeToCook website offers, links to the social platform and invites users to engage with the content.
+    ![Mockup](documentation/features/footer.png)
