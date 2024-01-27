@@ -32,12 +32,11 @@
             <li>{{ instruction.strip() }}</li>
             {% endfor %}
             <div class="center-align">
-
                 <!-- Modal Trigger -->
-                <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Delete</a>
+                <a class="waves-effect waves-light btn modal-trigger red" href="#modal{{recipe.id}}">Delete</a>
 
                 <!-- Modal Structure -->
-                <div id="modal1" class="modal">
+                <div id="modal{{recipe.id}}" class="modal">
                     <div class="modal-content">
                         <h4 class="center">Delete Recipe</h4>
                         <p>Please confirm that you want to delete this recipe. This action cannot be undone.</p>
@@ -49,10 +48,7 @@
                     </div>
                 </div>
 
-
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe.id)}}" class="btn green">Edit</a>
-
-
             </div>
             {% if recipe.favorited_by.filter_by(user_id=user_id).first() %}
             <!-- Unfavorite button -->
