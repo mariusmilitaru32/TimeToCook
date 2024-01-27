@@ -48,5 +48,8 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     The index page consists of three card panels, each simply explaining the main features of the website.
     ![Mockup](documentation/features/indexcardpanels.png)
   - ####
-    The index page features the top-rated recipes submitted by users. The recipes displayed have a rating of 4 or more. The picture and a short description of the recipe is displayed, including who added the recipe, its rating, difficulty, and category.
+    The index page features the top-rated recipes submitted by users. Only recipes with a rating of 4 or higher are shown, the picture and a short description of the recipe are displayed, including who added the recipe, its rating, difficulty, and category.
     ![Mockup](documentation/features/indexmostrated.png)
+- ### Footer
+  - #### 
+    This footer text gives a brief overview of what TimeToCook website offers, links to the social platform and invites users to engage with the content
