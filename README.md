@@ -70,4 +70,4 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/features/allrecipes.png)
 - ### Register
   - ####  
-  
+    The registration feature on website is a simple and secure way for new users to create their own accounts, which enables them to add recipes, edit and save to favourite.
