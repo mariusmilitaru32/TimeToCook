@@ -15,6 +15,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
+- [Credits](#credits)
 
 ## User Experience (UX)
 
@@ -205,4 +206,4 @@ TimeToCook is a place where you can find and add recipes. You can also save your
           exit()
           ```
 ## Credits
- - Stackoverflow
+ - [Stackoverflow](https://stackoverflow.com/) for the confirmpass and img url replace if not link is provided.
