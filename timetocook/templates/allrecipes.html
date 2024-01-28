@@ -40,10 +40,9 @@
                     <p>Category: {{ recipe.category.category_name }}</p>
                 </div>
                 <div class="card-action center">
-                    <a href="{{ url_for('view_recipe', recipe_id=recipe.id) }}">
-                        <button class="btn">View Recipe</button>
-                    </a>
+                    <a href="{{ url_for('view_recipe', recipe_id=recipe.id) }}" class="btn">View Recipe</a>
                 </div>
+
             </div>
         </div>
         {% endfor %}
