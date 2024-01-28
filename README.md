@@ -209,3 +209,6 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 ## Credits
  - [Stackoverflow](https://stackoverflow.com/) for the confirming the password and img url replace if invalid link is provided.
 ## Bugs
+  1. The first bug I encountered was within the 'delete category' function; it caused a random category to be deleted instead of the selected one, which was due to an issue with the MaterializeCSS modal. To fix this bug I had to specify in the modal trigger href what category id should be deleted. ``` href="#modal{{category.id}}" ```
+  2. 
+                                  
