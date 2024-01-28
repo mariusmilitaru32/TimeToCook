@@ -1,3 +1,4 @@
+// Code from stackoverflow and adapted for this project
 let password = document.getElementById("password");
 let confirm_password = document.getElementById("confirm_password");
 let errorMessage = document.getElementById("error-message");

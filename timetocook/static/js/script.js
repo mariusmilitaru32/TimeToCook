@@ -1,11 +1,15 @@
+
+// Materialize initialization
 document.addEventListener("DOMContentLoaded", function() {
     // sidenav initialization
     let sidenav = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenav);
 
+    // dropdown initialization
     let elems = document.querySelectorAll('.dropdown-trigger');
     let options = {inDuration: 300, outDuration: 225, coverTrigger: false}; M.Dropdown.init(elems, options);
     
+    // select initialization
     let category_input = document.querySelectorAll('select');
     M.FormSelect.init(category_input);
 
@@ -16,14 +20,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-//function to validate image urls
+// Code from stackoverflow and adapted for this project
+// Function to validate image urls
 function validateAndSetImageUrls() {
-    var images = document.querySelectorAll('.card-image img');
-    var defaultImageUrl = '../images/logo.png';
+    let images = document.querySelectorAll('.card-image img');
+    let defaultImageUrl = '../images/logo.png';
   
     images.forEach(function(img) {
         // Create a new Image object for validation
-        var testImage = new Image();
+        let testImage = new Image();
         testImage.onload = function() {
             // If this fires, the URL is valid and the image is loaded
             img.src = testImage.src;

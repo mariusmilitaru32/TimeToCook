@@ -204,3 +204,5 @@ TimeToCook is a place where you can find and add recipes. You can also save your
           db.create_all()
           exit()
           ```
+## Credits
+ - Stackoverflow
