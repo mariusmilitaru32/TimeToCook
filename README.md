@@ -11,6 +11,8 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 - [Index – Table of Contents](#index--table-of-contents)
 - [User Experience (UX)](#user-experience-ux)
 - [Features](#features)
+- [Design](#design)
+- [Technologies Used](#technologies-used)
 
 ## User Experience (UX)
 
@@ -95,19 +97,60 @@ TimeToCook is a place where you can find and add recipes. You can also save your
   - #### 
     The ‘Manage Users’ page is only accessible to the website administrator. The admin can restrict access for users, and when a user tries to log in, a message is displayed that their account has been disabled.
     ![Mockup](documentation/features/adminuser.png)
-- ## Design
+## Design
   - ### Color scheme
     As part of designing the site I decided to use purple, yellow and red as main colours. The pallete has been generated using [coolors.co](https://coolors.co/)
     ![Mockup](documentation/design/colors.png)
   - ### Typography
     Google Fonts were used to import Roboto into style.css
-  - ### Wireframes 
-   - Home Page <br>
+- ## Wireframes 
+   - ## Home Page <br>
      [Home page desktop](documentation/wireframes/IndexDesktop.png)<br>
      [Home page mobile](documentation//wireframes/IndexMobile.png)
-   - How To Play <br>
-     [How To Play Desktop](documentation/wireframes/HowToPlayDesktop.png)<br>
-     [How to Play Mobile](documentation/wireframes/HowToPlayMobile.png)
-   - Contact Page <br>
-     [Contact page desktop](documentation/wireframes/ContactDesktop.png)<br>
-     [Contact page mobile](documentation//wireframes/ContactMobile.png)
+   - ## Favourites
+     [Favourite Desktop](documentation/wireframes/FavouritesDekstop.png)<br>
+     [Favourite Mobile](documentation/wireframes/FavouritesMobile.png)
+   - ## My Recipes
+     [My Recipes Dekstop](documentation/wireframes/MyRecipesDekstop.png)<br>
+     [My Recipes Mobile](documentation//wireframes/MyRecipesMobile.png)
+   - ## Categories
+     [Categories Desktop](documentation/wireframes/CategoriesDesktop.png)<br>
+     [Categories Mobile](documentation//wireframes/CategoriesMobile.png)
+   - ## Edit Categories
+     [Edit Categories Desktop](documentation/wireframes/CategoriesDesktop.png)<br>
+     [Edit Categories Mobile](documentation//wireframes/CategoriesMobile.png)
+   - ## All Recipes
+     [All Recipes Desktop](documentation/wireframes/AllrecipesDesktop.png)<br>
+     [All Recipes Mobile](documentation//wireframes/AllRecipesMobile.png)
+   - ## Add Recipes
+     [Add Recipes Desktop](documentation/wireframes/AddRecipeDesktop.png)<br>
+     [Add Recipes Mobile](documentation//wireframes/AddRecipeMobile.png)
+   - ## Manage Users
+     [Manage Users Desktop](documentation/wireframes/ManageUsersDesktop.png)<br>
+     [Manage Users Mobile](documentation//wireframes/ManageUsersMobile.png)
+   - ## Register
+     [Register Desktop](documentation/wireframes/RegisterDekstop.png)<br>
+     [Register Mobile](documentation//wireframes/RegisterMobile.png)
+   - ## Log In
+     [Log In Desktop](documentation/wireframes/LogInDesktop.png)<br>
+     [Log In Mobile](documentation//wireframes/LogInMobile.png)
+   - ## View Recipe
+     [View Recipe Desktop](documentation/wireframes/ViewRecipeDekstop.png)<br>
+     [View Recipe Mobile](documentation//wireframes/ViewRecipeMobile.png)
+## Technologies Used
+  - ### Languages Used
+    -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+    -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+    -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    -   [Python](https://www.python.org/)
+   
+  - ### Frameworks, Libraries and Programs Used
+    -   [Google Fonts:](https://fonts.google.com/) was used to import the 'Roboto' font into the style.css file 
+    -   [Git:](https://git-scm.com/) was used for version control by utilising VSCode terminal to commit to Git and Push to GitHub.
+    -   [GitHub:](https://github.com/) was used as the repository for the projects code after being pushed from Git.
+    -   [Visual Studio Code](https://code.visualstudio.com/) was used as IDE editor.
+    -   [Balsamiq:](https://balsamiq.com/) was used to create the wireframes.
+    -   [Flask:](https://flask.palletsprojects.com/en/3.0.x/) Micro web framework written in Python.
+    -   [ElephantSQL:](https://www.elephantsql.com/) PostgreSQL database hosting service for hosting website database.
+    -   [Materializecss:](https://materializecss.com/) For making the website responsive.
+  
