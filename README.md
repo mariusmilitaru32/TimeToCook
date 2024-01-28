@@ -13,6 +13,8 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 - [Features](#features)
 - [Design](#design)
 - [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
 
 ## User Experience (UX)
 
@@ -153,4 +155,52 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     -   [Flask:](https://flask.palletsprojects.com/en/3.0.x/) Micro web framework written in Python.
     -   [ElephantSQL:](https://www.elephantsql.com/) PostgreSQL database hosting service for hosting website database.
     -   [Materializecss:](https://materializecss.com/) For making the website responsive.
+## Testing
+  - ### For testing please refer to the [TESTING.md](/TESTING.md)
+
+## Deployment
+- ## GitHub
   
+  - ### Cloning
+    - Go to the [GitHub repository](https://github.com/mariusmilitaru32/TimeToCook.git) 
+    - Locate the Code button above the list of files and click it
+    - Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+    - Open Git Bash or Terminal
+    - Change the current working directory to the one where you want the cloned directory
+    - In your IDE Terminal, type the following command to clone my repository: "git clone https://github.com/mariusmilitaru32/TimeToCook.git".
+  - ### Forking
+    By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+    You can fork this repository by using the following steps:
+    
+      - Log in to GitHub and locate the [GitHub Repository](https://github.com/mariusmilitaru32/TimeToCook.git)
+      - At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+      - Once clicked, you should now have a copy of the original repository in your own GitHub account!
+  - ## ElephantSQL
+    1. Go to ElephantSQL.com and select “Get a managed database today”.
+    2. Choose the “TINY TURTLE” plan and click “Try now for FREE”.
+    3. Log in with your GitHub account.
+    4. Create a team with your name, agree to the Terms of Service, select Yes for GDPR, and provide your email.
+    5. With your account set up, click on “Create New Instance” to start configuring your database.
+    6. For the new database plan:
+        - Assign a Name to your plan, usually related to your project.
+        - Choose the Tiny Turtle (Free) plan.
+        - Leave the Tags section empty unless you have tags to add.
+        - Pick a data center location near you. For example, EU-West-1 (Ireland) might be a     suitable choice.
+        - Click on "Review" to verify your selections.
+    7. Confirm that the details are correct and then click “Create instance” to finalize the creation of your database.
+    8. Go back to your ElephantSQL dashboard and select the instance name relevant to your project.
+    9. In the URL section, use the copy icon to copy your database URL. Keep this URL handy as you'll need it shortly.
+  - ## Heroku
+    1. Create requirements.txt and Procfile for Heroku deployment. 
+         - Use "pip3 freeze --local > requirements.txt" to generate requirements
+         - Use "echo web: python run.py > Procfile" (replace run.py with your app’s main file). Ensure the Procfile has no trailing blank lines. Save, commit, and push these files to GitHub.
+    2. Log in to Heroku.com, create a new app, and give it a unique name.
+    3. Connect the app to your GitHub repository under the deployment section.
+    4. In the settings tab, reveal config vars and add the environment variables used in env.py (IP, PORT, SECRET_KEY, DATABASE_URL, DEBUG). Make sure that DEBUG is removed in production enviroment.
+    5. Enable automatic deploys and Heroku will start building the app.
+    6. In the dashboard, select run console to set up the database tables on ElephantSQL by running 
+          ```bash
+          from timetocook import db
+          db.create_all()
+          exit()
+          ```
