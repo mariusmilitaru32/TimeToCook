@@ -87,11 +87,12 @@ main {
 }
 
 
-/* Hide the img tag if its src attribute is empty */
+/* Hide the img tag if its src attribute is empty 
 .card-image img[src=""],
 .card-image img:not([src]) {
     display: none;
 }
+*/
 
 /* Flask flash Alerts messages style */
 .alert-success {
