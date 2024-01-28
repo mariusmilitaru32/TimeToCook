@@ -95,3 +95,19 @@ TimeToCook is a place where you can find and add recipes. You can also save your
   - #### 
     The ‘Manage Users’ page is only accessible to the website administrator. The admin can restrict access for users, and when a user tries to log in, a message is displayed that their account has been disabled.
     ![Mockup](documentation/features/adminuser.png)
+- ## Design
+  - ### Color scheme
+    As part of designing the site I decided to use purple, yellow and red as main colours. The pallete has been generated using [coolors.co](https://coolors.co/)
+    ![Mockup](documentation/design/colors.png)
+  - ### Typography
+    Google Fonts were used to import Roboto into style.css
+  - ### Wireframes 
+   - Home Page <br>
+     [Home page desktop](documentation/wireframes/IndexDesktop.png)<br>
+     [Home page mobile](documentation//wireframes/IndexMobile.png)
+   - How To Play <br>
+     [How To Play Desktop](documentation/wireframes/HowToPlayDesktop.png)<br>
+     [How to Play Mobile](documentation/wireframes/HowToPlayMobile.png)
+   - Contact Page <br>
+     [Contact page desktop](documentation/wireframes/ContactDesktop.png)<br>
+     [Contact page mobile](documentation//wireframes/ContactMobile.png)
