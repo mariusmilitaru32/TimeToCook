@@ -87,3 +87,11 @@ TimeToCook is a place where you can find and add recipes. You can also save your
   - #### 
     My recipe page has been designed to help users keep a record of their own recipes that they have added.
     ![Mockup](documentation/features/myrecipes.png)
+- ### Add Recipes
+- ####
+  The ‘Add Recipes’ page is accessible after the user has logged in. It features an easy-to-use form that guides you through entering details such as the recipe’s title, ingredients, instructions, rating, and photo link for the recipe
+    ![Mockup](documentation/features/addrecipes.png)
+- ### Manage User
+  - #### 
+    The ‘Manage Users’ page is only accessible to the website administrator. The admin can restrict access for users, and when a user tries to log in, a message is displayed that their account has been disabled.
+    ![Mockup](documentation/features/adminuser.png)
