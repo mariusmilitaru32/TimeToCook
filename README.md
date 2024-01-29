@@ -17,6 +17,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 - [Deployment](#deployment)
 - [Credits](#credits)
 - [Bugs](#bugs)
+- [Unfixed bugs](#unfixed-bugs)
 
 ## User Experience (UX)
 
@@ -228,3 +229,15 @@ TimeToCook is a place where you can find and add recipes. You can also save your
       <img src="{{ recipe.img_url or '../images/logo.png' }}" alt="recipeIMG">
       ``` 
       In cases where the link is not provided, or if the link is invalid and an image cannot be rendered, I have created a JavaScript script to replace with a website logo image.
+## Unfixed bugs
+  - The unresolved bug is related to the image provided by the user. For example, if the user is simply typing text into the image URL field, the JavaScript replaces the missing image with a logo. However, I still receive a request in the Flask app, and the browser reports this as an error. I could't find a way to solve this request.
+  - Flask request <br>
+    ![Mockup](documentation/bugs/imgbug1.png)
+  - Browser console <br>
+    ![Mockup](documentation/bugs/imagebug2.png)
+  - The website logo is rendered fine <br>
+    ![Mockup](documentation/bugs/imagebug3.png)
+  - Recipe URL <br>
+    ![Mockup](documentation/bugs/imagebug4.png)
+    
+    
