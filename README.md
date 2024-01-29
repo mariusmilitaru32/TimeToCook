@@ -209,11 +209,22 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 ## Credits
  - [Stackoverflow](https://stackoverflow.com/) for the confirming the password and img url replace if invalid link is provided.
 ## Bugs
-  1. The first bug I encountered was within the 'delete category' function; it caused a random category to be deleted instead of the selected one, which was due to an issue with the MaterializeCSS modal. To fix this bug I had to specify in the modal trigger href what category id should be deleted. ``` href="#modal{{category.id}}" ```
-  2. The second bug I encountered was within the UserFavorite database model. When a recipe was deleted, it was not removed from the UserFavorite database. As a result, the app was crashing. To solve this bug, I had to create a relationship between the UserFavorite and Recipe database models. ``` recipe = db.relationship(
-        "Recipe",
-        backref=db.backref(
-            "favorited_by", lazy="dynamic", cascade="all, delete-orphan"
-        ),
-    ) ```
-  3. 
+  1. The first bug I encountered was within the 'delete category' function; it caused a random category to be deleted instead of the selected one, which was due to an issue with the MaterializeCSS modal. To fix this bug I had to specify in the modal trigger href what category id should be deleted. 
+      ``` 
+        href="#modal{{category.id}}" 
+
+      ```
+  2. The second bug I encountered was within the UserFavorite database model. When a recipe was deleted, it was not removed from the UserFavorite database. As a result, the app was crashing. To solve this bug, I had to create a relationship between the UserFavorite and Recipe database models. 
+      ```ruby
+        recipe = db.relationship(
+              "Recipe",
+              backref=db.backref(
+                  "favorited_by", lazy="dynamic", cascade="all, delete-orphan"
+              ),
+          ) 
+      ```
+   3. The third bug I encountered was related to the recipe image. The issue lies in how the image is rendered, which is based on a user-supplied link, using the following img source attribute in Flask: 
+      ```ruby
+      <img src="{{ recipe.img_url or '../images/logo.png' }}" alt="recipeIMG">
+      ``` 
+      In cases where the link is not provided, or if the link is invalid and an image cannot be rendered, I have created a JavaScript script to replace with a website logo image.
