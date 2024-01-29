@@ -256,8 +256,10 @@ def edit_recipe(recipe_id):
         return redirect(url_for("login"))
 
     user_id = session.get("user_id")
-    if recipe.user_id != user_id:  # check if the user is the owner
-        flash("You must be the owner to edit the recipe.", "error")
+    user = User.query.get(user_id)
+    # check if the user is the owner
+    if recipe.user_id != user_id and not user.admin:
+        flash("You must be the owner or admin to edit the recipe.", "error")
         return redirect(url_for("index"))
 
     if request.method == "POST":
