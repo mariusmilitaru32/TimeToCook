@@ -9,3 +9,5 @@ Back to [README.md](/README.md)
     - [HTML results Log In page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftimetocook-7eed92e3f20e.herokuapp.com%2Flogin): no errors/warnings
     - [HTML results Register page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftimetocook-7eed92e3f20e.herokuapp.com%2Fregister): no errors/warnings
     - [HTML results My Recipe page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftimetocook-7eed92e3f20e.herokuapp.com%2Fmyrecipes): no errors/warnings
+    - [HTML results Add Recipe page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftimetocook-7eed92e3f20e.herokuapp.com%2Fadd_recipe): no errors/warnings
+    - [HTML results Users page](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftimetocook-7eed92e3f20e.herokuapp.com%2Fusers): no errors/warnings

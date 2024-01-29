@@ -21,7 +21,9 @@
                 {% set ingredients_list = recipe.ingredients.split(',') %}
                 <ul>
                     {% for ingredient in ingredients_list %}
-                    <li><i class="fa-solid fa-bread-slice"></i> {{ ingredient.strip() }}</li>
+                    <ul>
+                        <li><i class="fa-solid fa-bread-slice"></i> {{ ingredient.strip() }}</li>
+                    </ul>
                     {% endfor %}
                 </ul>
             </div>
@@ -29,7 +31,9 @@
             <h4>Steps</h4>
             {% set instructions_list = recipe.instructions.split('/') %}
             {% for instruction in instructions_list %}
-            <li>{{ instruction.strip() }}</li>
+            <ul>
+                <li><i class="fa-solid fa-dot-circle"></i>{{ instruction.strip() }}</li>
+            </ul>
             {% endfor %}
             <div class="center-align">
                 <!-- Modal Trigger -->
