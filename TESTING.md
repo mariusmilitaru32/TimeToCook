@@ -25,4 +25,4 @@ Back to [README.md](/README.md)
     -  ## script.js
        Few warnings due to  materializecss initialization
        ![Mockup](documentation/testing/JsLintscript.png)
-  
+  - ### Python Linter by CodeInstitute

@@ -29,8 +29,12 @@ def login():
             else:
                 session["user_id"] = user.id
                 session["username"] = username
-                session["is_admin"] = user.admin  # required to check if user is admin
-                flash(f"Welcome, {username}! You have been logged in", "success")
+                session[
+                    "is_admin"
+                ] = user.admin  # required to check if user is admin
+                flash(
+                    f"Welcome, {username}! You have been logged in", "success"
+                )
                 return redirect(url_for("index"))
         else:
             flash("Invalid username or password", "error")
@@ -241,7 +245,9 @@ def add_recipe():
         db.session.add(recipe)
         db.session.commit()
         return redirect(url_for("index"))
-    return render_template("add_recipe.html", recipe_categories=recipe_categories)
+    return render_template(
+        "add_recipe.html", recipe_categories=recipe_categories
+    )
 
 
 @app.route("/edit_recipe/<int:recipe_id>", methods=["POST", "GET"])
@@ -363,7 +369,7 @@ def edit_category(category_id):
     if request.method == "POST":
         new_category_name = request.form.get("category_name")
         if new_category_name:
-            # Check if another category with the same name exists, excluding the current one
+            # Check if another category with the same name exists.
             existing_category = RecipeCategory.query.filter_by(
                 category_name=new_category_name
             ).first()
