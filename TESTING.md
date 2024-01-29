@@ -19,10 +19,18 @@ Back to [README.md](/README.md)
     -One Error due to materializecss library.   
     ![Mockup](documentation/testing/cssvalidator.png)
   - ### JsLint Validator
-    - ## confirmpas.js 
+    - ### confirmpas.js 
        One warning due to using arrow function
       ![Mockup](documentation/testing/JsLintconfirmPass.png)
-    -  ## script.js
+    -  ### script.js
        Few warnings due to  materializecss initialization
        ![Mockup](documentation/testing/JsLintscript.png)
   - ### Python Linter by CodeInstitute
+    - ### routes.py 
+       ![Mockup](documentation/testing/pythonroutes.png)
+    - ### models.py 
+       ![Mockup](documentation/testing/pythonmodels.png)
+    - ### __init__.py 
+       ![Mockup](documentation/testing/pythoninit.png)
+    - ### run.py 
+       ![Mockup](documentation/testing/pythonrun.png)
