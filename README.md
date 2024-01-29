@@ -101,7 +101,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/features/addrecipes.png)
 - ### Manage User
   - #### 
-    The ‘Manage Users’ page is only accessible to the website administrator. The admin can restrict access for users, and when a user tries to log in, a message is displayed that their account has been disabled.
+    The ‘Manage Users’ page is only accessible to the website administrator. The admin can restrict access for users, and when a user tries to log in, a message is displayed that their account has been disabled. Also admin users can edit any recipe/category.
     ![Mockup](documentation/features/adminuser.png)
 ## Design
   - ### Color scheme
@@ -109,6 +109,10 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/design/colors.png)
   - ### Typography
     Google Fonts were used to import Roboto into style.css
+  - ### Database schema
+     PostgreSQL is used as relational database using ElephantSQL as a host service
+    ![Mockup](documentation/design/dbschema.png)
+     
 - ## Wireframes 
    - ## Home Page <br>
      [Home page desktop](documentation/wireframes/IndexDesktop.png)<br>
@@ -159,6 +163,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     -   [Flask:](https://flask.palletsprojects.com/en/3.0.x/) Micro web framework written in Python.
     -   [ElephantSQL:](https://www.elephantsql.com/) PostgreSQL database hosting service for hosting website database.
     -   [Materializecss:](https://materializecss.com/) For making the website responsive.
+    -   [DbSchema:](https://dbschema.com/) For creating the database schema logic and     diagram.
 ## Testing
   - ### For testing please refer to the [TESTING.md](/TESTING.md)
 
