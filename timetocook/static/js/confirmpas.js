@@ -7,7 +7,8 @@ const confirmPassword = () => {
     if (password.value !== confirm_password.value) {
         // If passwords do not match, set a custom validity message
         confirm_password.setCustomValidity("Passwords do not match");
-        errorMessage.textContent = "Passwords do not match"; // Set the error message
+        // Set the error message
+        errorMessage.textContent = "Passwords do not match";
         errorMessage.style.display = "block"; // Show the error message
     } else {
         // If they do match, clear any custom validity message

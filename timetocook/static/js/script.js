@@ -16,15 +16,13 @@ document.addEventListener("DOMContentLoaded", function() {
     //modal initialization for deleteting recipe/category
     let confirm_delete = document.querySelectorAll('.modal');
     M.Modal.init(confirm_delete);
- 
-
 });
 
 // Code from stackoverflow and adapted for this project
 // Function to validate image urls
 function validateAndSetImageUrls() {
-    let images = document.querySelectorAll('.card-image img');
-    let defaultImageUrl = '../images/logo.png';
+    let images = document.querySelectorAll(".card-image img");
+    let defaultImageUrl = "../images/logo.png";
   
     images.forEach(function(img) {
         // Create a new Image object for validation
@@ -42,4 +40,3 @@ function validateAndSetImageUrls() {
     });
   }
   window.onload = validateAndSetImageUrls();
-  
