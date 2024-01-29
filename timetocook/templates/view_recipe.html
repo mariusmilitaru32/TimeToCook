@@ -11,7 +11,6 @@
             </div>
             <h2 class="recipe-title">{{recipe.name}}</h2>
             <p>Added by: {{ recipe.user.username }}</p>
-
             <p class="card-preview">Category: {{ recipe.category.category_name }}</p>
             <p>Rating: {{ recipe.rating }} out of 5</p>
             <p>Time to cook: {{recipe.time}} minutes</p>
@@ -53,13 +52,13 @@
             </div>
             {% if recipe.favorited_by.filter_by(user_id=user_id).first() %}
             <!-- Unfavorite button -->
-            <form action="{{ url_for('remove_favorite', recipe_id=recipe.id) }}" method="POST">
+            <form action="{{ url_for('remove_favorite', recipe_id=recipe.id) }}" method="POST" class="fav-btn">
                 <button type="submit" class="btn">Unfavorite</button>
             </form>
             {% else %}
             <!-- Favorite button -->
-            <form action="{{ url_for('add_favorite', recipe_id=recipe.id) }}" method="POST">
-                <button type="submit" class="btn">Add to Favorites</button>
+            <form action="{{ url_for('add_favorite', recipe_id=recipe.id) }}" method="POST" class="fav-btn">
+                <button type="submit" class="btn add-to-favorites">Add to Favorites</button>
             </form>
             {% endif %}
         </div>
