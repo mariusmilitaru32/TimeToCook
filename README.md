@@ -18,6 +18,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
 - [Credits](#credits)
 - [Bugs](#bugs)
 - [Unfixed bugs](#unfixed-bugs)
+- [Acknowledgements](#acknowledgements)
 
 ## User Experience (UX)
 
@@ -239,5 +240,6 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/bugs/imagebug3.png)
   - Recipe URL <br>
     ![Mockup](documentation/bugs/imagebug4.png)
-    
+## Acknowledgements
+  - I would like to thank [Codeinstitute](https://codeinstitute.net/) slack community for helping me during my studies and project creation.
     
