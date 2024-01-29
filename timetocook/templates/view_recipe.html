@@ -21,9 +21,9 @@
                 {% set ingredients_list = recipe.ingredients.split(',') %}
                 <ul>
                     {% for ingredient in ingredients_list %}
-                    <ul>
-                        <li><i class="fa-solid fa-bread-slice"></i> {{ ingredient.strip() }}</li>
-                    </ul>
+
+                    <li><i class="fa-solid fa-bread-slice"></i> {{ ingredient.strip() }}</li>
+
                     {% endfor %}
                 </ul>
             </div>
