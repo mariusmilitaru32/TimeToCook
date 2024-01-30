@@ -34,3 +34,30 @@ Back to [README.md](/README.md)
        ![Mockup](documentation/testing/pythoninit.png)
     - ### run.py 
        ![Mockup](documentation/testing/pythonrun.png)
+
+- ## Browser Compatibility
+  - Testing has been carried out on the following browsers with no issues:
+    - Chrome Version 119.0.6045.124 (Official Build) (64-bit)
+    - Firefox Version 119.0.1 (64-bit)
+    - Edge Version 119.0.2151.58 (Official build) (64-bit)
+   - No issues/warnings are being reported in the browser console.Apart from the bug reported in Bugs sesction
+   - ![Index page console](documentation/testing/browsertestDesktop.png)
+   - ![Index page console](documentation/testing/browsertestMobile.png)
+   - 
+- ## User Story Testing
+ | User Story                                                                   | Screenshot                                                |
+ | ---------------------------------------------------------------------------- | --------------------------------------------------------- |
+ | As a first time visitor, I want to see the most rated recipes.               | ![screenshot](documentation/features/indexrecipes.png)    |
+ | As a first time visitor, I want to be able to register on website            | ![screenshot](documentation/features/registration.png)    |
+ | As a first time visitor, I want to be able to view recipe categories.        | ![screenshot](documentation/features/categories.png)      |
+ | As a returning visitor, I want to be able to log in to the website           | ![screenshot](documentation/features/login.png)           |
+ | As a returning visitor, I want to be able to add a recipe.                   | ![screenshot](documentation/features/addrecipes.png)      |
+ | As a returning visitor, I want to be able to edit my recipes.                | ![screenshot](documentation/features/editRecipe.png)      |
+ | As a returning visitor, I want to be able to search through all the recipes. | ![screenshot](documentation/features/allrecipes.png)      |
+ | As a returning visitor, I want to be able to change my password.             | ![screenshot](documentation/features/passwordreset.png)   |
+ | As a returning visitor, I want to be able to add recipes to favourite.       | ![screenshot](documentation/features/favourites.png)      |
+ | As a administrator, I want to be able to manage categories.                  | ![screenshot](documentation/features/categorieslogin.png) |
+ | As a administrator, I want to be able to restric access to users.            | ![screenshot](documentation/features/adminuser.png)       |
+
+
+

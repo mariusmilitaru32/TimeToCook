@@ -89,6 +89,10 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     In case the username/password is incorrect or the user has been banned, a message is displayed.
     ![Mockup](documentation/features/loginbanned.png)
     ![Mockup](documentation/features/loginvalid.png)
+- ### Password Reset
+    User can reset his password from profile page.
+    ![Mockup](documentation/features/passwordreset.png)
+
 
 
 - ### My Recipes
@@ -103,6 +107,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
   - #### 
     The ‘Manage Users’ page is only accessible to the website administrator. The admin can restrict access for users, and when a user tries to log in, a message is displayed that their account has been disabled. Also admin users can edit any recipe/category.
     ![Mockup](documentation/features/adminuser.png)
+- ### 404 Page
 ## Design
   - ### Color scheme
     As part of designing the site I decided to use purple, yellow and red as main colours. The pallete has been generated using [coolors.co](https://coolors.co/)
@@ -247,4 +252,4 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/bugs/imagebug4.png)
 ## Acknowledgements
   - I would like to thank [Codeinstitute](https://codeinstitute.net/) slack community for helping me during my studies and project creation.
-    
+  
