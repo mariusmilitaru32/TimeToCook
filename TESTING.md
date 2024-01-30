@@ -85,7 +85,23 @@ Back to [README.md](/README.md)
 | Profile      | Desktop | ![screenshot](documentation/testing/lighthouse/profiledesktop.png)     |                                                |
 
 
-
+- ### Responsiveness
+  The website has been tested on different screen sizes using Google Chrome developer tool simulating devices like Iphone 14 Pro Max, Samsung S20 Ultra and Surface Pro 7 with no issues reported.
+   - #### Iphone 14 Pro Max DevTool Screenshoot
+    ![Mockup](documentation/testing/responsiveness/allrecipesmobile.png)
+    ![Mockup](documentation/testing/responsiveness/indexmobile.png)
+    ![Mockup](documentation/testing/responsiveness/loginmobile.png)
+   - #### Iphone SE for small mobile screens
+    ![Mockup](documentation/testing/responsiveness/indexse.png)
+    ![Mockup](documentation/testing/responsiveness/indexse.png)
+    ![Mockup](documentation/testing/responsiveness/vewrecipese.png)
+   - #### Desktop
+    ![Mockup](documentation/testing/responsiveness/categoriesdesktop.png)
+    ![Mockup](documentation/testing/responsiveness/addrecipedesktop.png)
+    ![Mockup](documentation/testing/responsiveness/desktopindex.png)
+    
+  
+   
 
 
 
@@ -106,6 +122,7 @@ Back to [README.md](/README.md)
 |     Register      |                   Press sign up button                    |                                    Confirmation message displayed and account created                                     |   Pass    |
 |      Log in       |                 Enter log in credentials                  |                             Log in confirmation message displayed and log in pages available                              |   Pass    |
 |      Log in       |              Enter wrong log in credentials               |                                      Message with wrong username/password displayed                                       |   Pass    |
+|      Log in       |                        Banned user                        |                                  Message with the account has been disabled is displayed                                  |   Pass    |
 |    Favourites     |     Open Favourites page(no favourites and logged in)     |                              If the user has no favourite no favourite message is displayed                               |   Pass    |
 |    Favourites     |    Open Favourites page(favourite added and logged in)    |                             All the recipes that have been added to favourites are displayed                              |   Pass    |
 |    Categories     |               click on the categories page                |                           All the categories are being displayed with no access to edit/remove                            |   Pass    |
