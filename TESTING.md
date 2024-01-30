@@ -60,4 +60,9 @@ Back to [README.md](/README.md)
  | As a administrator, I want to be able to restric access to users.            | ![screenshot](documentation/features/adminuser.png)       |
 
 
+ - ## Lighthouse test
+| Page | Device  | Screenshot                                                    | Notes |
+| ---- | ------- | ------------------------------------------------------------- | ----- |
+| Home | Mobile  | ![screenshot](documentation/tests/LighthouseIndexMobile.png)  |       |
+| Hone | Desktop | ![screenshot](documentation/tests/LighthouseIndexDesktop.png) |       |
 
