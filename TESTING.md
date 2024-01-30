@@ -61,8 +61,26 @@ Back to [README.md](/README.md)
 
 
  - ## Lighthouse test
-| Page | Device  | Screenshot                                                    | Notes |
-| ---- | ------- | ------------------------------------------------------------- | ----- |
-| Home | Mobile  | ![screenshot](documentation/tests/LighthouseIndexMobile.png)  |       |
-| Hone | Desktop | ![screenshot](documentation/tests/LighthouseIndexDesktop.png) |       |
+| Page         | Device  | Screenshot                                                             | Notes                                          |
+| ------------ | ------- | ---------------------------------------------------------------------- | ---------------------------------------------- |
+| Home         | Mobile  | ![screenshot](documentation/testing/lighthouse/indexmobile.png)        | 78 performance due to info cards on index page |
+| Home         | Desktop | ![screenshot](documentation/testing/lighthouse/indexdesktop.png)       |                                                |
+| Favourites   | Mobile  | ![screenshot](documentation/testing/lighthouse/favouritesmobile.png)   |                                                |
+| Favourites   | Desktop | ![screenshot](documentation/testing/lighthouse/favouritesdesktop.png)  |                                                |
+| Categories   | Mobile  | ![screenshot](documentation/testing/lighthouse/categoriesmobile.png)   |                                                |
+| Categories   | Desktop | ![screenshot](documentation/testing/lighthouse/categoriesdesktop.png)  |                                                |
+| All Recipes  | Mobile  | ![screenshot](documentation/testing/lighthouse/categoriesmobile.png)   |                                                |
+| All Recipes  | Desktop | ![screenshot](documentation/testing/lighthouse/allrecipesdesktop.png)  |                                                |
+| Log In       | Mobile  | ![screenshot](documentation/testing/lighthouse/loginmobile.png)        |                                                |
+| Log In       | Desktop | ![screenshot](documentation/testing/lighthouse/logindesktop.png)       |                                                |
+| Register     | Mobile  | ![screenshot](documentation/testing/lighthouse/registermobile.png)     |                                                |
+| Register     | Desktop | ![screenshot](documentation/testing/lighthouse/registerdesktop.png)    |                                                |
+| My Recipes   | Mobile  | ![screenshot](documentation/testing/lighthouse/myrecipesmobile.png)    |                                                |
+| My Recipes   | Desktop | ![screenshot](documentation/testing/lighthouse/registerdesktop.png)    |                                                |
+| Add Recipe   | Mobile  | ![screenshot](documentation/testing/lighthouse/addrecipemobile.png)    |                                                |
+| Add Recipe   | Desktop | ![screenshot](documentation/testing/lighthouse/addrecipedesktop.png)   |                                                |
+| Manage Users | Mobile  | ![screenshot](documentation/testing/lighthouse/manageusersmobile.png)  |                                                |
+| Manage Users | Desktop | ![screenshot](documentation/testing/lighthouse/manageusersdesktop.png) |                                                |
+| Profile      | Mobile  | ![screenshot](documentation/testing/lighthouse/profilemobile.png)      |                                                |
+| Profile      | Desktop | ![screenshot](documentation/testing/lighthouse/profiledesktop.png)     |                                                |
 
