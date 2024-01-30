@@ -90,10 +90,9 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/features/loginbanned.png)
     ![Mockup](documentation/features/loginvalid.png)
 - ### Password Reset
-    User can reset his password from profile page.
-    ![Mockup](documentation/features/passwordreset.png)
-
-
+    - #### 
+      User can reset his password from profile page.
+      ![Mockup](documentation/features/passwordreset.png)
 
 - ### My Recipes
   - #### 
@@ -108,6 +107,9 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     The ‘Manage Users’ page is only accessible to the website administrator. The admin can restrict access for users, and when a user tries to log in, a message is displayed that their account has been disabled. Also admin users can edit any recipe/category.
     ![Mockup](documentation/features/adminuser.png)
 - ### 404 Page
+   - #### In case an user tries to access a wrong page flask  will handle the 404 template.
+      ![Mockup](documentation/features/404.png)
+     
 ## Design
   - ### Color scheme
     As part of designing the site I decided to use purple, yellow and red as main colours. The pallete has been generated using [coolors.co](https://coolors.co/)
@@ -116,7 +118,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     Google Fonts were used to import Roboto into style.css
   - ### Database schema
      PostgreSQL is used as relational database using ElephantSQL as a host service
-    ![Mockup](documentation/design/dbschema.png)
+      ![Mockup](documentation/design/dbschema.png)
      
 - ## Wireframes 
    - ## Home Page <br>
