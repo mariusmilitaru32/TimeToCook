@@ -84,28 +84,39 @@ Back to [README.md](/README.md)
 | Profile      | Mobile  | ![screenshot](documentation/testing/lighthouse/profilemobile.png)      |                                                |
 | Profile      | Desktop | ![screenshot](documentation/testing/lighthouse/profiledesktop.png)     |                                                |
 
+
+
+
+
+
+
 - ## Manual Testing
-|     Page     |                        User Action                        |                                                     Expected Results                                                      | Pass/Fail | Comments |
-| :----------: | :-------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-------: | :------: |
-|  Home Page   |                    Click on logo name                     |                                                   Redirect to home page                                                   |   Pass    |
-|              |                 Click on home button menu                 |                                                   Redirect to home page                                                   |   Pass    |
-|              |                Click on favourites butoon                 |                              Redirect to favourite page and message for log in is displayed                               |   Pass    |
-|              |                Click on All recipe button                 |                                               Redirect to All recipes page                                                |   Pass    |
-|              |              Click on dropdown account menu               |                                                    Dropdown menu open                                                     |   Pass    |
-|              |                    User not logged in                     |                                        Only login and register pages are available                                        |   Pass    |
-|              |                Click on login menu button                 |                                                  Redirect to login page                                                   |   Pass    |
-|              |               Click on register menu button               |                                                 Redirect to register page                                                 |   Pass    |
-|              |                 User logged in(non admin)                 |                  The rest of pages are displayed(Add recipes,Profile,My Recipes)and access to favourites                  |   Pass    |
-|   Register   | User enter username, email, password and confirm password |                         Validation rule for the username and password and confirm password error                          |   Pass    |
-|   Register   |                   Press sign up button                    |                                    Confirmation message displayed and account created                                     |   Pass    |
-|    Log in    |                 Enter log in credentials                  |                             Log in confirmation message displayed and log in pages available                              |   Pass    |
-|    Log in    |              Enter wrong log in credentials               |                                      Message with wrong username/password displayed                                       |   Pass    |
-|  Favourites  |     Open Favourites page(no favourites and logged in)     |                              If the user has no favourite no favourite message is displayed                               |   Pass    |
-|  Favourites  |    Open Favourites page(favourite added and logged in)    |                             All the recipes that have been added to favourites are displayed                              |   Pass    |
-|  Categories  |               click on the categories page                |                           All the categories are being displayed with no access to edit/remove                            |   Pass    |
-| All Recipes  |               click on the all recipes page               | All recipes are being displayed with the option to view and favourite them(edit or remove only for recipe owner or admin) |   Pass    |
-|   Profile    |       click on the profile page and reset password        |                             Password has been reset and a confirmation message is displayed.                              |   Pass    |
-|  My Recipes  |                 click on My Recipes page                  |                                         All the user recipes are being displayed                                          |   Pass    |
-|  Add recipe  |       click on the add recipe page and fill up form       |                      The recipe has been added successfully and a confirmation message is displayed.                      |   Pass    |
-|   Log out    |                 click on the log out page                 |                User is logged out and the user pages are hidden. Log out comfirmation message is displayed                |   Pass    |
-| Manage Users |    click on the manage users page and ban/unban users     |                           The user is banned/unbanned and access is either removed or granted.                            |   Pass    |
+|       Page        |                        User Action                        |                                                     Expected Results                                                      | Pass/Fail | Comments |
+| :---------------: | :-------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-------: | :------: |
+|     Home Page     |                    Click on logo name                     |                                                   Redirect to home page                                                   |   Pass    |
+|                   |                 Click on home button menu                 |                                                   Redirect to home page                                                   |   Pass    |
+|                   |                Click on favourites butoon                 |                              Redirect to favourite page and message for log in is displayed                               |   Pass    |
+|                   |                Click on All recipe button                 |                                               Redirect to All recipes page                                                |   Pass    |
+|                   |              Click on dropdown account menu               |                                                    Dropdown menu open                                                     |   Pass    |
+|                   |                    User not logged in                     |                                        Only login and register pages are available                                        |   Pass    |
+|                   |                Click on login menu button                 |                                                  Redirect to login page                                                   |   Pass    |
+|                   |               Click on register menu button               |                                                 Redirect to register page                                                 |   Pass    |
+|                   |                 User logged in(non admin)                 |                  The rest of pages are displayed(Add recipes,Profile,My Recipes)and access to favourites                  |   Pass    |
+|     Register      | User enter username, email, password and confirm password |                         Validation rule for the username and password and confirm password error                          |   Pass    |
+|     Register      |                   Press sign up button                    |                                    Confirmation message displayed and account created                                     |   Pass    |
+|      Log in       |                 Enter log in credentials                  |                             Log in confirmation message displayed and log in pages available                              |   Pass    |
+|      Log in       |              Enter wrong log in credentials               |                                      Message with wrong username/password displayed                                       |   Pass    |
+|    Favourites     |     Open Favourites page(no favourites and logged in)     |                              If the user has no favourite no favourite message is displayed                               |   Pass    |
+|    Favourites     |    Open Favourites page(favourite added and logged in)    |                             All the recipes that have been added to favourites are displayed                              |   Pass    |
+|    Categories     |               click on the categories page                |                           All the categories are being displayed with no access to edit/remove                            |   Pass    |
+|  Edit Categories  |                     Edit one category                     |            The category name changed for all the recipes within that category. confirmation message displayed             |   Pass    |
+| Delete Categories |                    Delete one category                    |                The category has been removed with all the related recipes, confirmation message displayed                 |   Pass    |
+|    All Recipes    |               click on the all recipes page               | All recipes are being displayed with the option to view and favourite them(edit or remove only for recipe owner or admin) |   Pass    |
+|      Profile      |       click on the profile page and reset password        |                             Password has been reset and a confirmation message is displayed.                              |   Pass    |
+|    My Recipes     |                 click on My Recipes page                  |                                         All the user recipes are being displayed                                          |   Pass    |
+|    Add recipe     |       click on the add recipe page and fill up form       |                      The recipe has been added successfully and a confirmation message is displayed.                      |   Pass    |
+|    Edit Recipe    |             click on the recipe edit and save             |                     The recipe has been edited successfully and a confirmation message is displayed.                      |   Pass    |
+|   Delete Recipe   |                     Delete the recipe                     |         The recipe has been deleted successfully, removed from favourite and a confirmation message is displayed.         |   Pass    |
+|      Log out      |                 click on the log out page                 |                User is logged out and the user pages are hidden. Log out comfirmation message is displayed                |   Pass    |
+|   Manage Users    |    click on the manage users page and ban/unban users     |                           The user is banned/unbanned and access is either removed or granted.                            |   Pass    |
+|        404        |                   Enter an invalid url                    |                                   The 404 page is being displayed with the 404 message                                    |   Pass    |
