@@ -36,8 +36,8 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     5. As a returning visitor, I want to be able to change my password.
     6. As a returning visitor, I want to be able to add recipes to favourite.
   - #### C. Administrator
-    1. As a administrator, I want to be able to manage categories.
-    2. As a administrator, I want to be able to restric access to users.
+    1. As an administrator, I want to be able to manage categories.
+    2. As an administrator, I want to be able to restrict access to users.
    
 ## Features
 
@@ -56,7 +56,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     The index page consists of three card panels, each simply explaining the main features of the website.
     ![Mockup](documentation/features/indexcardpanels.png)
   - ####
-    The index page features the top-rated recipes submitted by users. Only recipes with a rating of 4 or higher are shown, the picture and a short description of the recipe are displayed, including who added the recipe, its rating, difficulty, and category.
+    The index page features the top-rated recipes submitted by users. Only recipes with a rating of 4 or higher are shown. The picture and a short description of the recipe are displayed, including who added the recipe, its rating, difficulty, and category.
     ![Mockup](documentation/features/indexmostrated.png)
 - ### Footer
   - #### 
@@ -69,7 +69,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/features/favouritelogin.png)
 - ### Categories
   - #### 
-    The website is intuitively organized into categories to ensure you can find the perfect recipe with ease. The categories can be only added, deleted or edited by admins.
+    The website is intuitively organized into categories to ensure you can find the perfect recipe with ease. The categories can be  added, deleted or edited only by admins.
     ![Mockup](documentation/features/categorieslogin.png)
     ![Mockup](documentation/features/categories.png)
 - ### All recipes
@@ -78,11 +78,11 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     ![Mockup](documentation/features/allrecipes.png)
 - ### Register
   - ####  
-    The registration feature on website is a simple and secure way for new users to create their own accounts, which enables them to add recipes, edit and save to favourite. Users are asked to confirm their password to avoid mistyping it.
+    The registration feature on the website is a simple and secure way for new users to create their own accounts, which enables them to add recipes, edit and save to favourite. Users are asked to confirm their password to avoid mistyping it.
     ![Mockup](documentation/features/registration.png)
 - ### Log In
   - #### 
-    When the user is logged in an  message is shown to confirm.
+    When the user is logged in a message is shown to confirm.
     ![Mockup](documentation/features/login.png)
     ![Mockup](documentation/features/loginmessage.png)
   - ####
@@ -107,7 +107,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
     The ‘Manage Users’ page is only accessible to the website administrator. The admin can restrict access for users, and when a user tries to log in, a message is displayed that their account has been disabled. Also admin users can edit any recipe/category.
     ![Mockup](documentation/features/adminuser.png)
 - ### 404 Page
-   - #### In case an user tries to access a wrong page flask  will handle the 404 template.
+   - #### In case an user tries to access a wrong page, Flask  will handle the 404 template.
       ![Mockup](documentation/features/404.png)
      
 ## Design
@@ -164,7 +164,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
   - ### Frameworks, Libraries and Programs Used
     -   [Google Fonts:](https://fonts.google.com/) was used to import the 'Roboto' font into the style.css file 
     -   [Git:](https://git-scm.com/) was used for version control by utilising VSCode terminal to commit to Git and Push to GitHub.
-    -   [GitHub:](https://github.com/) was used as the repository for the projects code after being pushed from Git.
+    -   [GitHub:](https://github.com/) was used as the repository for the project's code after being pushed from Git.
     -   [Visual Studio Code](https://code.visualstudio.com/) was used as IDE editor.
     -   [Balsamiq:](https://balsamiq.com/) was used to create the wireframes.
     -   [Flask:](https://flask.palletsprojects.com/en/3.0.x/) Micro web framework written in Python.
@@ -221,7 +221,7 @@ TimeToCook is a place where you can find and add recipes. You can also save your
           exit()
           ```
 ## Credits
- - [Stackoverflow](https://stackoverflow.com/) for the confirming the password and img url replace if invalid link is provided.
+ - [Stackoverflow](https://stackoverflow.com/) for confirming the password and img url replace if invalid link is provided.
 ## Bugs
   1. The first bug I encountered was within the 'delete category' function; it caused a random category to be deleted instead of the selected one, which was due to an issue with the MaterializeCSS modal. To fix this bug I had to specify in the modal trigger href what category id should be deleted. 
       ``` 
